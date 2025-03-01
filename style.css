@@ -29,10 +29,18 @@ header {
 
 .logo {
     margin: 0 50px;
+    font-family: "Roboto", sans-serif;
 }
 
 nav {
     margin: 0 50px; /* Margin on left and right */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(251, 169, 25);
 }
 
 nav ul {
@@ -41,9 +49,17 @@ nav ul {
     display: flex; /* Flexbox for horizontal layout */
 }
 
+.nav-links.active {
+    display: block;
+}
+
 nav ul li {
     margin: 0 15px;
-    font-weight: 900; /* Margin between list items */
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 40px;
+    font-family:"Roboto", sans-serif;
+
 }
 
 nav a {
@@ -51,18 +67,16 @@ nav a {
     text-decoration: none;
     font-weight: 900;
     position: relative; /* Ensure the relative positioning for the underline */
-    text-decoration: none;
-
     padding: 5px 0;
     transition: color 0.3s ease, letter-spacing 0.3s ease; /* Smooth transitions */
 }
 
 nav a:hover {
-    color: #FBA919; /* Blue color on hover to match the link */
+    color: #FBA919; /* Color on hover to match the link */
     letter-spacing: 3px;
 }
 
- nav a::after{
+nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -72,11 +86,13 @@ nav a:hover {
     background-color: #FBA919;
     transform: scaleX(0);
     transition: transform 0.3s ease;
- }
- nav a:hover::after{
+}
+
+nav a:hover::after {
     transform: scaleX(1);
- }
-.home{
+}
+
+.home {
     background-image: url("assets/10001.jpg");
     background-size: cover;
     background-position: center;
@@ -90,34 +106,36 @@ nav a:hover {
     color: white;
 
 }
-.contents{
+
+.contents {
     margin-left: 30px;
 }
-.contents .content{
+
+.contents .content {
     font-size: 60px;
     font-weight: 700;
     color: rgb(255, 255, 255);
     line-height: 66px;
     font-family: 'Oswald', sans-serif;
-
 }
-.contents .welcome{
+
+.contents .welcome {
     color: rgb(251, 169, 25);
 }
-.contents p{
+
+.contents p {
     color: rgb(255, 255, 255);
     font-size: 16px;
     line-height: 23px;
-
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-
 }
 
-.contents .p1{
+.contents .p1 {
     margin-top: 30px;
 }
-.btn{
+
+.btn {
     display: inline-block; /* Allows padding and border */
     padding: 10px 20px; /* Vertical and horizontal padding */
     background-color: rgb(251, 169, 25); /* Background color */
@@ -133,11 +151,12 @@ nav a:hover {
     width: 100px;
     margin-top: 30px;
     transition: background-color 0.3s, border-color 0.3s; /* Transition effects */
-
 }
-.btn:hover{
+
+.btn:hover {
     letter-spacing: 3px;
 }
+
 .about > div{
     padding-left: 60px;
 }
@@ -510,14 +529,14 @@ nav a:hover {
 }
 
 .info_container {
-    position: relative;
+    position: relative !important;
 }
 
 .info {
-    position: relative;
+    position: relative !important;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
     flex-direction: column;
     padding: 10px;
     transform-style: preserve-3d;
@@ -544,11 +563,11 @@ nav a:hover {
     font-size: 30px;
     padding: 10px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px !important;
+    height: 50px !important;
     transform: translateZ(10px);
     line-height: 40px;
-    background: linear-gradient(0deg, orange, orange); /* Change the background color of icons to orange */
+    background: linear-gradient(0deg, orange, orange);
         color: white;
     transition: 0.4s;
 
@@ -950,37 +969,80 @@ form h1 {
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center align text */
+    position: relative; /* Position relative for layout */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
 }
+
+.footer-container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+}
+
+.social-media {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above social media links */
+}
+
+.social-media a {
+    color: #FBA919; /* Icon color */
+    margin: 0 15px; /* Space between social media links */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.social-media a:hover {
+    color: #fff; /* Color on hover */
+}
+
+
 
 /* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 10px 20px; /* Adjust padding */
-    }
-
-    .logo {
-        margin: 0; /* Remove margin for mobile */
-        text-align: center; /* Center the logo */
-    }
-
-    nav {
-        margin: 10px 0; /* Adjust margin for nav */
-    }
-
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items */
+        display: none;
+        flex-direction: column;
+        width: auto;
+        background: #ffffff; /* White background for dropdown */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+
+        left: 50%;
+        z-index: 1;
+        align-items: center; /* Center items horizontally */
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        padding: 10px 0; /* Add padding for better spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin between items */
+        margin: 10px 0;}
+
+    nav ul.active {
+        display: flex;
+    }
+    .logo {
+        margin: 0;
     }
 
+    nav {
+        margin: 0 ; /* Margin on left and right */
+        margin-top: 0;
+    }
+
+
+    .menu-icon {
+        display: block;
+    }
     .home {
         padding-left: 10px; /* Reduce padding on the left */
         height: 80vh; /* Reduce height for smaller screens */
@@ -1012,26 +1074,18 @@ footer {
         flex-basis: 100%; /* Full width for image on smaller screens */
         margin-bottom: 20px; /* Space below the image */
     }
+    .social-media {
+        flex-direction: column; /* Stack icons vertically */
+    }
+
+    .social-media a {
+        margin: 10px 0; /* Space between icons when stacked */
+        font-size: 20px; /* Slightly smaller icon size */
+    }
 }
 
 /* Extra small devices (max-width: 480px) */
 @media (max-width: 650px) {
-    header {
-        padding: 8px 10px; /* Further reduce padding for small screens */
-    }
-
-    .logo {
-        font-size: 20px; /* Smaller logo font size */
-    }
-
-    nav ul {
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
-    }
-
-    .home {
-        padding-left: 5px; /* Further reduce padding */
-    }
 
     .contents .content {
         font-size: 32px; /* Smaller font size for content */
@@ -1208,5 +1262,48 @@ footer {
     .description {
         font-size: 12px; /* Further adjust paragraph size */
         padding: 0 10px; /* Add side padding for breathing room */
+    }
+    footer {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .social-media a {
+        font-size: 18px; /* Smaller icon size for very small screens */
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .home {
+        margin-top: 120px; /* Increase margin for mobile to avoid overlap with dropdown */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position dropdown */
+
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center alignment */
+
+        padding: 10px 0; /* Padding around dropdown */
+
+        z-index: 1; /* Ensure dropdown is above other content */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex; /* Show dropdown when active */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between dropdown items */
     }
 }
