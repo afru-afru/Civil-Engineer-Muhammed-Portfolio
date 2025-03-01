@@ -1,0 +1,1212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+body,html {
+    border: none !important; /* Remove any body border */
+    margin-right: 0 !important; /* Prevent right margin */
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between; /* Title on the left, nav on the right */
+    align-items: center; /* Center vertically */
+    background: #ffffff; /* White background */
+    color: #999999; /* Dark text color */
+    padding: 10px;
+    font-weight: 900; /* Added vertical padding */
+    position: fixed;
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Ensures it stretches across the width */
+    z-index: 1000;
+}
+
+.logo {
+    margin: 0 50px;
+}
+
+nav {
+    margin: 0 50px; /* Margin on left and right */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-weight: 900; /* Margin between list items */
+}
+
+nav a {
+    color: #999999; /* Gray color for the links */
+    text-decoration: none;
+    font-weight: 900;
+    position: relative; /* Ensure the relative positioning for the underline */
+    text-decoration: none;
+
+    padding: 5px 0;
+    transition: color 0.3s ease, letter-spacing 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+    color: #FBA919; /* Blue color on hover to match the link */
+    letter-spacing: 3px;
+}
+
+ nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #FBA919;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+ }
+ nav a:hover::after{
+    transform: scaleX(1);
+ }
+.home{
+    background-image: url("assets/10001.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align content to the left */
+    padding-left: 20px; /* Add some padding on the left */
+    text-align: left; /* Align text to the left */
+    color: white;
+
+}
+.contents{
+    margin-left: 30px;
+}
+.contents .content{
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    line-height: 66px;
+    font-family: 'Oswald', sans-serif;
+
+}
+.contents .welcome{
+    color: rgb(251, 169, 25);
+}
+.contents p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 23px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+.contents .p1{
+    margin-top: 30px;
+}
+.btn{
+    display: inline-block; /* Allows padding and border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    background-color: rgb(251, 169, 25); /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    border: 2px solid rgb(251, 169, 25); /* Border with a darker color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    font-weight: 700; /* Font weight */
+    font-size: 14px; /* Font size */
+    line-height: 23px; /* Line height */
+    width: 100px;
+    margin-top: 30px;
+    transition: background-color 0.3s, border-color 0.3s; /* Transition effects */
+
+}
+.btn:hover{
+    letter-spacing: 3px;
+}
+.about > div{
+    padding-left: 60px;
+}
+.about img{
+    border: 15px solid #fff; /* Border width, style, and color */
+    border-radius: 20px; /* Optional: rounded corners */
+    padding: 5px; /* Optional: space between the border and the image */
+    box-shadow: 0 2px 5px rgb(73, 73, 73);/* Optional: shadow for depth */
+}
+.about .inner__container {
+    display: flex;
+
+    justify-content: center;
+    margin-top: 50px;
+    gap: 70px;
+
+}
+.about .inner__container .descriptionContainer{
+    margin-right: 40px;
+    margin-bottom: 60px;
+}
+.about .inner__container .description{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    color:
+    rgb(73, 73, 73);
+    font-family: "ROBOTO", sans-serif;
+    padding-right: 90px;
+}
+ .about .aboutTitle{
+ text-align: center;
+ margin-top: 30px;
+ }
+ .about .aboutTitle .innerTitle1{
+    color: rgb(251, 169, 25);
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;    ;
+
+
+ }
+ .about .aboutTitle .innerTitle2{
+    color:
+    rgb(52, 52, 52);
+    font-family: "ROBOTO",sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+ }
+ /* .about .about__lists{
+    margin-top: 40px;
+ } */
+.about .inner__container .lists{
+    display: flex;
+    gap: 50px;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(106, 106, 106);
+}
+.about .inner__container .lists .list1 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* align-items: center;
+    justify-content: center; */
+    padding: 30px;
+    margin-top: 50px;
+
+}
+.about .inner__container .lists .list1 ul .flex_withIcons{
+    display: flex;
+    gap: 20px;
+
+
+}
+.about .inner__container .lists .list1 ul .flex_withIcons .icon{
+    color: rgb(251, 169, 25);
+}
+.about .inner__container div .description{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color:
+    rgb(73, 73, 73);
+}
+.parent, .services, .servicesDescription {
+    border: none !important;  /* Remove borders from specific sections */
+}
+
+/* Style for the parent section */
+.parent {
+    min-height: 800px; /* Set a minimum height for the section */
+
+
+}
+
+/* Style for the services section */
+.services {
+    border: 1px solid #ccc; /* Border for the services section */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Padding for the services section */
+}
+
+/* Style for the title color section */
+.services .titleColor {
+    background-color: rgb(251, 169, 25); /* Background color */
+    padding: 30px 50px; /* Unified padding */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+}
+
+/* Style for the button and subtitle container */
+.services div .withBtn {
+    display: flex; /* Enable flexbox */
+    gap: 100px; /* Space between items */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the button */
+}
+
+/* Style for subtitle paragraphs */
+.services div .withBtn .subtitle p {
+    color: rgb(255, 255, 255); /* White text color */
+    font-weight: 400; /* Normal weight */
+    font-size: 16px; /* Font size */
+    line-height: 23px; /* Line height */
+    font-family: 'Roboto', sans-serif; /* Font family */
+}
+
+.services div .withBtn .subtitle .pmargin2 {
+    margin-bottom: 15px; /* Space below this paragraph */
+}
+
+/* Style for subtitle heading */
+.services div .withBtn .subtitle h1 {
+    color: rgb(255, 255, 255); /* White text color */
+    font-weight: 700; /* Bold weight */
+    font-size: 30px; /* Font size */
+    line-height: 33px; /* Line height */
+    font-family: 'Oswald', sans-serif; /* Font family */
+}
+
+/* Style for the button */
+.services div .withBtn .btn {
+    display: inline-block; /* Allows padding and border */
+    padding: 10px 20px; /* Padding */
+    background-color: #fff; /* Button background color */
+    color: rgb(251, 169, 25); /* Text color */
+    text-align: center; /* Center text */
+    border: 2px solid rgb(251, 169, 25); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Roboto', sans-serif; /* Font family */
+    font-weight: 700; /* Bold weight */
+    font-size: 14px; /* Font size */
+    line-height: 23px; /* Line height */
+    width: 200px; /* Button width */
+    margin-top: 30px; /* Space above the button */
+    transition: background-color 0.3s, border-color 0.3s; /* Transition effect */
+}
+.services div .withBtn .btn:hover{
+    letter-spacing: 3px;
+}
+/* Style for the services description section */
+.servicesDescription {
+    background-color: #f4f5f97e; /* Background color */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the inner container */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Padding around the description */
+    width: 100%; /* Ensure it takes full width */
+    height: 500px;
+    margin-right: 0 !important;
+}
+.servicesDescription p{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    width: 100%; /* Ensure p tags take full width */
+    text-align: center; /* Center text */
+
+
+}
+
+/* Style for the icon container */
+.icon-container {
+    display: flex; /* Enable flexbox for icon boxes */
+    justify-content: center; /* Center icon boxes */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 100px; /* Set a gap of 100px between the icon boxes */
+    max-width: 1200px; /* Set a maximum width for the container */
+    width: 100%; /* Allow it to take full width of the parent */
+    margin: 0 auto; /* Center the inner container */
+}
+
+/* Style for each icon box */
+.icon-box {
+    display: flex; /* Enable flexbox for each box */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    width: 150px; /* Fixed width for each box */
+}
+
+/* Style for the icon circle */
+.icon-circle {
+    display: flex; /* Center icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 90px; /* Circle diameter */
+    height: 90px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background-color: #ffffff; /* Background color */
+    color: rgb(251, 169, 25); /* Icon color */
+    font-size: 24px; /* Size of the icons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s; /* Optional transition effect */
+}
+
+/* Hover effect for icon circle */
+.icon-circle:hover {
+    background-color: rgb(251, 169, 25); /* Change background on hover */
+    color: white; /* Change icon color on hover */
+}
+
+.projectTitle{
+    text-align: center;
+    margin-top: 30px;
+}
+.projectTitle h1{
+    color: rgb(251, 169, 25);
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+.experianceAndProjects{
+    background-color: #f0f0f07d;
+    height: auto;
+    padding: 30px;
+    margin-right: 0 !important;
+}
+
+.experianceAndProjects .experiance ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    gap: 40px;
+
+
+
+}
+
+.experianceAndProjects .experiance ul a{
+    position: relative;
+
+}
+
+.experianceAndProjects .experiance ul a:hover{
+    color: rgb(251, 169, 25);
+}
+.experianceAndProjects .experiance ul a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #FBA919;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+ }
+ .experianceAndProjects .experiance ul a:hover::after{
+    transform: scaleX(1);
+ }
+.experianceAndProjects .experiance{
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
+
+
+
+
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    gap: 30px;
+}
+.projects img{
+    width: 300px;
+    height: 20%;
+
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+
+}
+.projects .projectName{
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 0 !important;
+}
+.projects h1{
+    color: rgb(251, 169, 25);
+    font-size: 15px;
+    line-height: 50px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+
+}
+.title-line {
+    border-top: 2px solid black; /* Set the color and thickness of the line */
+    width: 50%; /* Set the width of the line */
+    margin: 10px auto;
+
+}
+
+
+
+
+/* .layer6 {
+    background: url("../img/pexels-pixabay-262488.jpg"), #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: difference;
+    filter: invert(1);
+} */
+.layer6{
+    background-color: #fff !important;
+}
+
+.layer6 .contact_us {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    /* filter: invert(1); */
+    color: white;
+}
+
+.info_container {
+    position: relative;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.info::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* filter: blur(5px); */
+}
+
+.info i {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateZ(10px);
+    line-height: 40px;
+    background: linear-gradient(0deg, orange, orange); /* Change the background color of icons to orange */
+        color: white;
+    transition: 0.4s;
+
+}
+
+.info:hover i {
+    transform: translateZ(40px);
+    transition: 0.4s 0.1s;
+}
+
+.info a {
+    transform: translateZ(0px);
+    /* color: dodgerblue; */
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.info:hover a {
+    transform: translateZ(75px);
+    transition: 0.4s 0.2s;
+}
+
+.info .iname {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    transition: 0.4s;
+    /* color: #acacac; */
+}
+
+.info:hover .iname {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0.2;
+}
+
+form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form h1 {
+    /* color: #ccc; */
+    text-align: center;
+}
+
+form .inp_field {
+    position: relative;
+    width: 380px;
+    height: 65px;
+    border-radius: 100px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+form .inp_field input {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background: none;
+    outline: none;
+    overflow: visible;
+    color: #adadad;
+}
+
+.inp_field input::placeholder {
+    font-weight: 500;
+}
+
+.inp_field i {
+    color: #ababab;
+}
+
+.message {
+    width: 380px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "ROBOTO",sans-serif;
+    background: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    color: #adadad;
+    font-weight: 500;
+    resize: vertical;
+}
+
+.submit {
+    display: inline-block; /* Allows padding and border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    background-color: rgb(251, 169, 25) !important; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    border: 2px solid rgb(251, 169, 25) !important; /* Border with a darker color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    font-weight: 700; /* Font weight */
+    font-size: 14px; /* Font size */
+    line-height: 23px; /* Line height */
+    width: 100px;
+    margin-top: 30px;
+    transition: background-color 0.3s, border-color 0.3s;
+
+}
+
+.submit:hover {
+    letter-spacing: 3px;
+}
+
+/* .submit::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 30px;
+    height: 40px;
+    background: lime;
+
+    filter: blur(10px);
+    z-index: -1;
+    transition: 0.5s;
+} */
+
+/* .submit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.199);
+    transform: skew(45deg) translate(-20px, 0);
+    transition: 0.5s;
+}
+
+.submit:hover::after {
+    transform: skew(45deg) translate(200px, 0);
+}
+
+.submit:hover::before {
+    height: 80%;
+    bottom: 0;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.25s;
+} */
+
+form h1 {
+    color: rgb(251, 169, 25); /* Change the color to orange */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    filter: invert(1);
+}
+
+/* Centering the h1 tag and changing its color */
+.layer6 form h1 {
+    color: orange !important; /* Change the color to orange */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Updating the submit button color */
+.layer6 .submit {
+    background-color: orange !important; /* Change background color to orange */
+    border: 2px solid orange !important; /* Change border color to orange */
+}
+
+/* Changing the icons' color to orange */
+.layer6 .info i {
+    background: linear-gradient(0deg, orange, orange) !important; /* Change the background color of icons to orange */
+    color: white !important; /* Change icon color to white for better contrast */
+}
+
+@media (max-width: 632px) {
+    .layer6 .contact_us {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .icon-container {
+        flex-direction: column; /* Stack icon boxes vertically */
+        align-items: center; /* Center items */
+        gap: 50px; /* Reduced gap on smaller screens */
+    }
+
+    .icon-box {
+        width: 100%; /* Allow boxes to take full width */
+        max-width: 300px; /* Set a maximum width for icon boxes */
+    }
+    .services {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .services .titleColor {
+        padding: 20px; /* Reduce padding in title section */
+    }
+
+    .services .withBtn {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+        gap: 20px; /* Reduce gap between elements */
+    }
+
+    .services .withBtn .subtitle h1 {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .services .withBtn .subtitle p {
+        font-size: 14px; /* Smaller paragraph font size */
+    }
+
+    .services .withBtn .btn {
+        width: 100%; /* Full-width button on small screens */
+        padding: 15px; /* Increase padding for touch targets */
+    }
+
+    .servicesDescription {
+        height: auto; /* Allow height to adjust automatically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .icon-container {
+        flex-direction: column; /* Stack icon boxes vertically */
+        align-items: center; /* Center icon boxes */
+        gap: 30px; /* Adjust gap for smaller screens */
+    }
+
+    .icon-box {
+        width: 90%; /* Make icon boxes full width */
+        max-width: 250px; /* Limit max width */
+    }
+
+    .experianceAndProjects {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .projectTitle h1 {
+        font-size: 28px; /* Smaller title size */
+    }
+
+    .experianceAndProjects .experiance ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: 15px; /* Space between items */
+    }
+
+    .projects {
+        flex-direction: column; /* Stack project boxes vertically */
+        gap: 20px; /* Space between projects */
+    }
+
+    .projects img {
+        width: 100%; /* Full width for images on small screens */
+        max-width: 300px; /* Limit max width */
+    }
+
+    .projects h1 {
+        font-size: 14px; /* Smaller font size for project names */
+    }
+    .layer6 {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .contact_us {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align */
+    }
+
+    #map {
+        height: 200px; /* Reduce map height on smaller screens */
+        width: 100%; /* Full width for the map */
+    }
+
+    .info_container {
+        flex-direction: column; /* Stack info items vertically */
+        width: 100%; /* Full width for info container */
+    }
+
+    .info {
+        margin-bottom: 15px; /* Space below info items */
+        text-align: center; /* Center align text */
+    }
+
+    form {
+        width: 100%; /* Full width for form */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    form h1 {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .inp_field input,
+    .message {
+        padding: 10px; /* Adjust padding for inputs */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .submit {
+        width: 100%; /* Full width for the submit button */
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .projects h1 {
+        font-size: 12px; /* Even smaller font size for project names */
+    }
+
+    .projectName {
+        padding: 5px; /* Reduce padding for project names */
+    }
+
+    .experianceAndProjects .experiance {
+        margin: 30px 20px; /* Adjust margins for smaller screens */
+    }
+
+    .projectTitle h1 {
+        font-size: 24px; /* Smaller title size for very small screens */
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .services .withBtn {
+        gap: 15px; /* Further reduce gap */
+    }
+
+    .services .withBtn .btn {
+        font-size: 12px; /* Smaller font size for button */
+        padding: 10px; /* Adjust button padding */
+    }
+
+    .services .withBtn .subtitle h1 {
+        font-size: 20px; /* Even smaller title size */
+    }
+
+    .services .withBtn .subtitle p {
+        font-size: 12px; /* Smaller paragraph font size */
+    }
+
+    .icon-box {
+        max-width: 180px; /* Smaller max width for icon boxes */
+    }
+    .layer6 {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    #map {
+        height: 150px; /* Further reduce map height */
+    }
+
+    form h1 {
+        font-size: 18px; /* Smaller title size for very small screens */
+    }
+
+    .inp_field input,
+    .message {
+        font-size: 12px; /* Smaller font size for inputs */
+    }
+
+    .info a {
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    .info_container {
+        padding: 10px; /* Reduce padding in info container */
+    }
+
+    .info {
+        display: flex; /* Use flex for icon and text */
+        justify-content: center; /* Center items */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .logo {
+        margin: 0; /* Remove margin for mobile */
+        text-align: center; /* Center the logo */
+    }
+
+    nav {
+        margin: 10px 0; /* Adjust margin for nav */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust margin between items */
+    }
+
+    .home {
+        padding-left: 10px; /* Reduce padding on the left */
+        height: 80vh; /* Reduce height for smaller screens */
+    }
+
+    .contents .content {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .contents .welcome {
+        font-size: 36px; /* Adjust font size for welcome */
+    }
+
+    .contents p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .btn {
+        width: auto; /* Allow buttons to adjust width */
+        font-size: 12px; /* Reduce button font size */
+    }
+    .descriptionContainer {
+        padding: 10px; /* Reduce padding on smaller screens */
+        width: 100%; /* Allow full width */
+        margin: 0; /* Remove margin to prevent overflow */
+    }
+
+     .inner__container img {
+        flex-basis: 100%; /* Full width for image on smaller screens */
+        margin-bottom: 20px; /* Space below the image */
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 650px) {
+    header {
+        padding: 8px 10px; /* Further reduce padding for small screens */
+    }
+
+    .logo {
+        font-size: 20px; /* Smaller logo font size */
+    }
+
+    nav ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    .home {
+        padding-left: 5px; /* Further reduce padding */
+    }
+
+    .contents .content {
+        font-size: 32px; /* Smaller font size for content */
+    }
+
+    .contents .welcome {
+        font-size: 30px; /* Smaller welcome font size */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 12px; /* Ensure the button font size is manageable */
+    }
+
+
+    .about > div {
+        padding-left: 20px; /* Reduce left padding */
+    }
+
+    .about .inner__container {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center items */
+        gap: 30px; /* Reduce gap */
+    }
+
+    .about img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about .inner__container .descriptionContainer {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 30px; /* Adjust bottom margin */
+        min-width: 300px;
+    }
+
+    .about .inner__container .description {
+        padding-right: 0; /* Remove right padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .about .aboutTitle .innerTitle1 {
+        font-size: 28px; /* Smaller title size */
+    }
+
+    .about .aboutTitle .innerTitle2 {
+        font-size: 12px; /* Smaller subtitle size */
+    }
+
+    .about .inner__container .lists {
+        flex-direction: column; /* Stack lists vertically */
+        gap: 20px; /* Space between lists */
+    }
+
+    .about .inner__container .lists .list1 ul {
+        padding: 10px; /* Reduce padding */
+        margin-top: 20px; /* Reduce margin */
+    }
+}
+
+@media (max-width:900px){
+    .services {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .services .titleColor {
+        padding: 20px; /* Reduce padding in title section */
+    }
+
+    .services .withBtn {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+        gap: 20px; /* Reduce gap between elements */
+    }
+
+    .services .withBtn .subtitle h1 {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .services .withBtn .subtitle p {
+        font-size: 14px; /* Smaller paragraph font size */
+    }
+
+    .services .withBtn .btn {
+        width: 100%; /* Full-width button on small screens */
+        padding: 15px; /* Increase padding for touch targets */
+    }
+
+    .servicesDescription {
+        height: auto; /* Allow height to adjust automatically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .icon-container {
+        flex-direction: column; /* Stack icon boxes vertically */
+        align-items: center; /* Center icon boxes */
+        gap: 30px; /* Adjust gap for smaller screens */
+    }
+
+    .icon-box {
+        width: 90%; /* Make icon boxes full width */
+        max-width: 250px; /* Limit max width */
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+/* @media (max-width: 480px) {
+    .services .withBtn {
+        gap: 15px;
+    }
+
+    .services .withBtn .btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .services .withBtn .subtitle h1 {
+        font-size: 20px;
+    }
+
+    .services .withBtn .subtitle p {
+        font-size: 12px;
+    }
+
+    .icon-box {
+        max-width: 180px;
+    }
+} */
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .about > div {
+        padding-left: 10px; /* Further reduce left padding */
+    }
+
+    .about .inner__container {
+        gap: 20px; /* Further reduce gap */
+    }
+
+    .about .aboutTitle .innerTitle1 {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .about .aboutTitle .innerTitle2 {
+        font-size: 10px; /* Smaller subtitle size */
+    }
+
+    .about .inner__container .description {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .about .inner__container .lists {
+        gap: 10px; /* Reduce space between lists */
+    }
+
+    .about .inner__container .lists .list1 ul {
+        padding: 5px; /* Further reduce padding */
+    }
+    .inner__container {
+        padding: 0; /* Remove padding to prevent overflow */
+    }
+
+    .descriptionContainer {
+        padding: 10px; /* Maintain padding for readability */
+        margin: 0; /* Remove margin for better fit */
+    }
+
+    .inner__container img {
+        margin: 5px 0; /* Reduce margin on very small screens */
+        max-width: 100%; /* Ensure image does not overflow */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below the image */
+    }
+    .description {
+        font-size: 12px; /* Further adjust paragraph size */
+        padding: 0 10px; /* Add side padding for breathing room */
+    }
+}
