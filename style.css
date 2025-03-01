@@ -1276,9 +1276,6 @@ footer {
 
 
 @media (max-width: 600px) {
-    .home {
-        margin-top: 120px; /* Increase margin for mobile to avoid overlap with dropdown */
-    }
 
     .menu-icon {
         display: block; /* Show menu icon on mobile */
