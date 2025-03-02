@@ -24,3 +24,18 @@ document.querySelectorAll('#nav-links li a').forEach(link => {
         }
     });
 });
+
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    emailjs.sendForm(service_4ozm7eg, template_ox72ct8, this)
+    .then(function() {
+        alert('Message sent successfully!');
+        document.querySelector('form').reset(); // Reset the form after submission
+    }, function(error) {
+        alert('Failed to send message. Please try again later.');
+        console.error('Error:', error);
+    });
+});
