@@ -121,18 +121,21 @@ nav a:hover::after {
 
 .contents .welcome {
     color: rgb(251, 169, 25);
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
 }
 
-.contents p {
+.contents h2 {
     color: rgb(255, 255, 255);
     font-size: 16px;
     line-height: 23px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .contents .p1 {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .btn {
